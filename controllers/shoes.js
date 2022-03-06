@@ -10,4 +10,11 @@ function newShoe(req, res) {
   })
 }
 
-export { index, newShoe as new }
+
+function update(req, res) {
+  res.render('shoes/update', {
+    title: "Update Your Listing"
+  })
+}
+
+export { index, newShoe as new, update }

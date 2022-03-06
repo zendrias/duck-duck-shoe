@@ -7,4 +7,6 @@ router.get('/', shoesCtrl.index)
 
 router.get('/new', shoesCtrl.new)
 
+router.get('/update', shoesCtrl.update)
+
 export { router }
