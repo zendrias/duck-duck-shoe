@@ -145,3 +145,7 @@ nav > a {
 .profile-pic{
   border-radius: 50%;
 }
+
+a{
+  font-size: 20px;
+}
