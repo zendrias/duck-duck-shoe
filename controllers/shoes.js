@@ -1,3 +1,5 @@
+import { Shoe } from '../models/shoe.js'
+
 function index(req, res) {
   res.render('shoes/index', {
     title: `My Shoes`
@@ -10,6 +12,10 @@ function newShoe(req, res) {
   })
 }
 
+function create(req, res) {
+
+}
+
 
 function update(req, res) {
   res.render('shoes/update', {
@@ -17,4 +23,4 @@ function update(req, res) {
   })
 }
 
-export { index, newShoe as new, update }
+export { index, newShoe as new, update, create }
