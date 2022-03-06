@@ -1,5 +1,7 @@
 import mongoose from 'mongoose'
 
+const Schema = mongoose.Schema
+
 const shoeSchema = new mongoose.Schema({
   name: String,
   price: {
@@ -20,6 +22,9 @@ const shoeSchema = new mongoose.Schema({
   },
   reservations: {
     type: Number
+  },
+  owner: {
+    type: Schema.Types.ObjectId, 'ref': "Profile"
   }
 }, {
   timestamps: true

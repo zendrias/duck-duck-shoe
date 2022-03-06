@@ -9,4 +9,6 @@ router.get('/new', shoesCtrl.new)
 
 router.get('/update', shoesCtrl.update)
 
+router.post('/create', shoesCtrl.create)
+
 export { router }

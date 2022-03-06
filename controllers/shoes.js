@@ -13,7 +13,15 @@ function newShoe(req, res) {
 }
 
 function create(req, res) {
-
+  req.body.owner = req.user.profile._id
+  Shoe.create(req.body)
+    .then(shoe => {
+      res.redirect('/dashboard')
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('dashboard')
+    })
 }
 
 
