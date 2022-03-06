@@ -1,0 +1,21 @@
+<%- include('../partials/html-head') %>
+  <%- include('../partials/dashboardNav') %>
+
+    <body>
+      <h1>Your Listings</h1>
+      <% shoes.forEach(shoe=> { %>
+        <a href="/shop/<%= shoe._id %>">
+          <div class="product-cards">
+            <img src="<%= shoe.image %>" alt="Listing Image" class="all-listing-image">
+            <p>
+              <%= shoe.name %>
+            </p>
+        </a>
+        <p>
+          $<%= shoe.price %>
+        </p>
+        </div>
+        <% }) %>
+    </body>
+
+    </html>

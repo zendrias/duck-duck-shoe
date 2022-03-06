@@ -25,10 +25,16 @@ function create(req, res) {
 }
 
 
-function update(req, res) {
-  res.render('shoes/update', {
-    title: "Update Your Listing"
-  })
+function myListings(req, res) {
+  console.log(req.user)
+  Shoe.find({ owner: req.user.profile._id })
+    .then(shoes => {
+      res.render('shoes/myListings', {
+        title: "Your Listings",
+        shoes,
+      })
+    })
+
 }
 
-export { index, newShoe as new, update, create }
+export { index, newShoe as new, create, myListings }

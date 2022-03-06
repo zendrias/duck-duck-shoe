@@ -7,7 +7,9 @@ router.get('/', shoesCtrl.index)
 
 router.get('/new', shoesCtrl.new)
 
-router.get('/update', shoesCtrl.update)
+// router.get('/update', shoesCtrl.update)
+
+router.get('/mylistings', shoesCtrl.myListings)
 
 router.post('/create', shoesCtrl.create)
 
