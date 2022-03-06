@@ -22,6 +22,8 @@ import { router as authRouter } from './routes/auth.js'
 import { router as dashboardsRouter } from './routes/dashboards.js'
 import { router as brandsRouter } from './routes/brands.js'
 import { router as shoesRouter } from './routes/shoes.js'
+import { router as shopsRouter } from './routes/shops.js'
+
 
 // create the express app
 const app = express()
@@ -69,7 +71,7 @@ app.use('/auth', authRouter)
 app.use('/dashboard', isLoggedIn, dashboardsRouter)
 app.use('/brand', brandsRouter)
 app.use('/shoes', isLoggedIn, shoesRouter)
-app.use('/shoes', isLoggedIn, shoesRouter)
+app.use('/shop', isLoggedIn, shopsRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
