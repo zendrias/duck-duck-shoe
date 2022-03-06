@@ -23,6 +23,7 @@ import { router as dashboardsRouter } from './routes/dashboards.js'
 import { router as brandsRouter } from './routes/brands.js'
 import { router as shoesRouter } from './routes/shoes.js'
 import { router as shopsRouter } from './routes/shops.js'
+import { router as legalsRouter } from './routes/legals.js'
 
 
 // create the express app
@@ -72,7 +73,7 @@ app.use('/dashboard', isLoggedIn, dashboardsRouter)
 app.use('/brand', brandsRouter)
 app.use('/shoes', isLoggedIn, shoesRouter)
 app.use('/shop', isLoggedIn, shopsRouter)
-
+app.use('/legal', legalsRouter)
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404))
