@@ -158,3 +158,22 @@ display: flex;
 align-items: center;
 justify-content: space-evenly;
 }
+
+.all-listing-image{
+  width: 150px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.product-cards{
+  width: auto;
+  margin: 10px;
+  border: 1px black solid;
+  border-radius: 10px;
+  padding: 5px 5px 0 5px;
+}
