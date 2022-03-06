@@ -4,6 +4,25 @@
 
     <body>
       <h1>Update Listing</h1>
+      <form action="/shoes/update" method="POST">
+        <label for="name">Shoe Name</label>
+        <input type="text" name="name" required placeholder="Product Name">
+        <br>
+        <label for="price">Set A Price</label>
+        <input type="Number" name="price" required placeholder="$">
+        <br>
+        <label for="size">Available Sizes</label>
+        <input name="size" type="text" required placeholder="Separate Each Size With A Comma">
+        <br>
+        <label for="image">Product Image Link</label>
+        <input type="text" name="image" required placeholder="URL Only">
+        <br>
+        <h3>Brief Description</h3>
+        <textarea id="description" name="description" rows="9" cols="80"
+          placeholder="A Great Description Boosts Reservations By 47%!"></textarea>
+        <br>
+        <button>Update</button>
+      </form>
     </body>
 
     </html>
