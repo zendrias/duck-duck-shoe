@@ -1,10 +1,17 @@
 
 function index(req, res) {
-  res.render('dashboard/index', {
+  res.render('dashboards/index', {
     title: 'dashboard'
   })
 }
 
+function analytics(req, res) {
+  res.render('dashboards/analytics', {
+    title: 'My Analytics'
+  })
+}
+
 export {
-  index
+  index,
+  analytics
 }
