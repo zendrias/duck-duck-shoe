@@ -4,4 +4,10 @@ function index(req, res) {
   })
 }
 
-export { index }
+function newShoe(req, res) {
+  res.render('shoes/new', {
+    title: 'Add A Shoe!'
+  })
+}
+
+export { index, newShoe as new }
