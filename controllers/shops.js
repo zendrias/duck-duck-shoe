@@ -20,7 +20,8 @@ function show(req, res) {
     .populate('owner')
     .then(shoe => {
       res.render('shops/show', {
-        shoe
+        shoe,
+        title: 'Details'
       })
     })
 }

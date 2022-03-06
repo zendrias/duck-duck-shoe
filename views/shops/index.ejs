@@ -1,9 +1,13 @@
 <%- include('../partials/html-head') %>
-  <%- include('../partials/nav') %>
+  <% if (user) { %>
+    <%- include('../partials/dashboardNav') %>
+      <% } else { %>
+        <%- include('../partials/nav') %>
+          <% } %>
 
-    <body>
-      <h1>Shop Here</h1>
-      <a href="/shop/all">View All Listings</a>
-    </body>
+            <body>
+              <h1>Shop Here</h1>
+              <a href="/shop/all">View All Listings</a>
+            </body>
 
-    </html>
+            </html>

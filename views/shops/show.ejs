@@ -7,7 +7,7 @@
 
             <body>
               <div>
-                <img src="<%= shoe.image %> " alt="Listing Image">
+                <img src="<%= shoe.image %> " alt="Listing Image" class="listing-img">
               </div>
               <div>
                 <h3>
@@ -16,7 +16,7 @@
                 <p>Select Size</p>
                 <select name="size" id="size-selection">
                   <% shoe.size.split(', ').forEach(size =>{ %> 
-                  <option value="<%= size %> ">Size</option>
+                  <option value="<%= size %> "><%= size %></option>
                   <% }) %> 
                 </select>
               </div>
@@ -29,6 +29,9 @@
   <h3>Description</h3>
   <p>
     <%= shoe.description %> 
+  </p>
+  <p>
+    Courtesy of <a href="profiles/<%= shoe.owner._id %> "><%= shoe.owner.name %></a> 
   </p>
 </div>
 
