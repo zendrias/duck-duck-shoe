@@ -6,4 +6,7 @@ router.get('/', shopCtrl.index)
 
 router.get('/all', shopCtrl.all)
 
+router.get('/:id', shopCtrl.show)
+
+
 export { router }

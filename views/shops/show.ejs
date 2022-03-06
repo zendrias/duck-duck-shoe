@@ -1,0 +1,37 @@
+<%- include('../partials/html-head') %>
+  <% if (user) { %>
+    <%- include('../partials/dashboardNav') %>
+      <% } else { %>
+        <%- include('../partials/nav') %>
+          <% } %>
+
+            <body>
+              <div>
+                <img src="<%= shoe.image %> " alt="Listing Image">
+              </div>
+              <div>
+                <h3>
+                  <%= shoe.name %>
+                </h3>
+                <p>Select Size</p>
+                <select name="size" id="size-selection">
+                  <% shoe.size.split(', ').forEach(size =>{ %> 
+                  <option value="<%= size %> ">Size</option>
+                  <% }) %> 
+                </select>
+              </div>
+<div>
+  <h3>Total Reservations</h3>
+  <p>XXX</p>
+  <button>Reserve</button>
+</div>
+<div>
+  <h3>Description</h3>
+  <p>
+    <%= shoe.description %> 
+  </p>
+</div>
+
+            </body>
+
+            </html>

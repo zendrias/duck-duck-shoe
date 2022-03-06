@@ -15,4 +15,14 @@ function all(req, res) {
   })
 }
 
-export { index, all }
+function show(req, res) {
+  Shoe.findById(req.params.id)
+    .populate('owner')
+    .then(shoe => {
+      res.render('shops/show', {
+        shoe
+      })
+    })
+}
+
+export { index, all, show }

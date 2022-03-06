@@ -9,17 +9,19 @@
               <h1>All Shoes Here</h1>
               <div class="container">
                 <% shoes.forEach(shoe=>{%>
-                  <div class="product-cards">
-                    <img src="<%= shoe.image %>" alt="Listing Image" class="all-listing-image">
-                    <p>
-                      <%= shoe.name %>
-                    </p>
-                    <p>
-                      $<%= shoe.price %>
-                    </p>
-                  </div>
-                  <% }) %>
+                  <a href="/shop/<%= shoe._id %> ">
+                    <div class="product-cards">
+                      <img src="<%= shoe.image %>" alt="Listing Image" class="all-listing-image">
+                      <p>
+                        <%= shoe.name %>
+                      </p>
+                  </a>
+                  <p>
+                    $<%= shoe.price %>
+                  </p>
               </div>
+              <% }) %>
+                </div>
 
             </body>
 
