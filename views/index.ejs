@@ -1,16 +1,20 @@
 <%- include('./partials/html-head') %>
-<%- include('./partials/nav') %>
+  <%- include('./partials/nav') %>
 
-<main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
-  <% if (user?.profile.avatar) { %>
-    <div>
-      <img
-        src="<%= user.profile.avatar %>"
-        alt="<%= user.profile.name %> avatar"
-      />
-    </div>
-  <% } %>
-</main>
+    <main>
+      <% if (user) { %>
+        <p>
+          <%= user.profile %>
+        </p>
+        <h1> Hello <%= user.profile.name %>
+        </h1>
+        <img class="profile-pic" src="<%= user.profile.avatar %>" alt="<%= user.profile.name %> avatar" />
+        <% } else { %>
 
-<%- include('./partials/footer') %>
+          <h1> Hello Please Log In</h1>
+
+          <% } %>
+
+    </main>
+
+    <%- include('./partials/footer') %>

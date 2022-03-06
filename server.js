@@ -15,8 +15,13 @@ import('./config/database.js')
 import('./config/passport.js')
 
 // require routes
+import { isLoggedIn } from './middleware/middleware.js'
+import { passUserToView } from './middleware/middleware.js'
 import { router as indexRouter } from './routes/index.js'
 import { router as authRouter } from './routes/auth.js'
+import { router as dashboardsRouter } from './routes/dashboards.js'
+import { router as brandsRouter } from './routes/brands.js'
+import { router as shoesRouter } from './routes/shoes.js'
 
 // create the express app
 const app = express()
@@ -55,9 +60,15 @@ app.use(
 app.use(passport.initialize())
 app.use(passport.session())
 
+// custom middleware
+app.use(passUserToView)
+
 // router middleware
 app.use('/', indexRouter)
 app.use('/auth', authRouter)
+app.use('/dashboard', isLoggedIn, dashboardsRouter)
+app.use('/brand', brandsRouter)
+app.use('/shoes', isLoggedIn, shoesRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

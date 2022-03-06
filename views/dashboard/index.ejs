@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= user.profile.name %>'s Dashboard
+  </title>
+  <%- include('../partials/html-head') %>
+    <%- include('../partials/nav') %>
+
+
+<body>
+  <h1>Personal Dashboard Here</h1>
+  <div>
+    <h1>
+      Welcome [ <%= user.profile.name.split(' ').splice(0,1)%>  ]
+    </h1>
+  </div>
+  <a href="/shoes">Manage Products</a>
+  <br>
+  <a href="/analytics">Analytics</a>
+</body>
+
+</html>
