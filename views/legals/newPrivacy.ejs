@@ -7,10 +7,16 @@
 
             <body>
               <form action="/legal/privacy/<%= user.profile._id %>" method="POST">
-                <h3>Write Your Policy Below</h3>
-                <textarea name="privacy" id="privacy" cols="30" rows="10" placeholder="Here!"></textarea>
+                <h3>Write Your Privacy Policy Below</h3>
+                <textarea name="privacyPolicy" id="privacy" cols="50" rows="10" placeholder="Here!"></textarea>
                 <br>
                 <button type="submit">Submit</button>
+                <br>
+                <h3>Write Your Terms Of Service Below</h3>
+                <textarea name="termsOfService" id="termsOfService" cols="50" rows="10" placeholder="Here!"></textarea>
+                <br>
+                <h3>Shipping Policy</h3>
+                <textarea name="shipping" id="shipping" cols="50" rows="10" placeholder="Here!"></textarea>
               </form>
             </body>
 

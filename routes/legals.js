@@ -9,10 +9,10 @@ router.get('/termsofservice/:id', legalsCtrl.terms)
 
 router.get('/privacypolicy/:id', legalsCtrl.privacy)
 
-router.get('/privacypolicy/new/:id', isLoggedIn, legalsCtrl.newPrivacy)
+router.get('/settings/:id', isLoggedIn, legalsCtrl.newPrivacy)
 
 router.get('/shipping/:id', legalsCtrl.shipping)
 
-router.post('/privacy/:id', legalsCtrl.createPrivacy)
+// router.post('//:id', legalsCtrl.createPrivacy)
 
 export { router }

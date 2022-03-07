@@ -5,15 +5,15 @@ let Schema = mongoose.Schema
 const siteSettingsSchema = new mongoose.Schema({
   privacyPolicy: {
     type: String,
-    default: ''
+    default: 'Privacy Policy'
   },
   termsOfService: {
     type: String,
-    default: ''
+    default: 'Terms Of Service'
   },
-  shippingPolicy: {
+  shipping: {
     type: String,
-    default: ''
+    default: 'Shipping Policy'
   }
 })
 
