@@ -20,7 +20,7 @@ function create(req, res) {
     })
     .catch(err => {
       console.log(err)
-      res.redirect('dashboard')
+      res.redirect('/dashboard')
     })
 }
 
@@ -37,4 +37,22 @@ function myListings(req, res) {
 
 }
 
-export { index, newShoe as new, create, myListings }
+function update(req, res) {
+  Shoe.findByIdAndUpdate(req.params.id, req.body)
+    .then(shoe => {
+      res.redirect('/shoes/mylistings')
+    })
+}
+
+function updateForm(req, res) {
+  Shoe.findById(req.params.id)
+    .then(shoe => {
+      res.render('shoes/update', {
+        title: 'Update Shoe',
+        shoe
+      })
+    }
+    )
+}
+
+export { index, newShoe as new, create, myListings, update, updateForm }

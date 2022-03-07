@@ -6,22 +6,22 @@
       <h1>Update Listing</h1>
       <form action="/shoes/update" method="POST">
         <label for="name">Shoe Name</label>
-        <input type="text" name="name" required placeholder="Product Name">
+        <input type="text" name="name" required placeholder="Product Name" value="<%= shoe.name %> ">
         <br>
         <label for="price">Set A Price</label>
-        <input type="Number" name="price" required placeholder="$">
+        <input type="Number" name="price" required placeholder="$" value="<%= shoe.price %>">
         <br>
         <label for="size">Available Sizes</label>
-        <input name="size" type="text" required placeholder="Separate Each Size With A Comma">
+        <input name="size" type="text" required placeholder="Separate Each Size With A Comma" value="<%= shoe.size %> ">
         <br>
         <label for="image">Product Image Link</label>
-        <input type="text" name="image" required placeholder="URL Only">
+        <input type="text" name="image" required placeholder="URL Only" value="<%= shoe.image %> ">
         <br>
         <h3>Brief Description</h3>
         <textarea id="description" name="description" rows="9" cols="80"
-          placeholder="A Great Description Boosts Reservations By 47%!"></textarea>
+          placeholder="A Great Description Boosts Reservations By 47%!"><%= shoe.description %></textarea>
         <br>
-        <button>Update</button>
+        <button type="submit">Update</button>
       </form>
     </body>
 
