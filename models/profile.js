@@ -14,7 +14,7 @@ const profileSchema = new mongoose.Schema({
   siteSettings: [siteSettingsSchema],
   shoesListed: {
     type: [Schema.Types.ObjectId], "ref": "Shoe"
-  }
+  },
 }, {
   timestamps: true
 })

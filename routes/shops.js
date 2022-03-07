@@ -8,5 +8,5 @@ router.get('/all', shopCtrl.all)
 
 router.get('/:id', shopCtrl.show)
 
-
+router.get('/profiles/:id', shopCtrl.profile)
 export { router }

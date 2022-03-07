@@ -14,7 +14,10 @@
         <p>
           $<%= shoe.price %>
         </p>
-        <a href="/shoes/update/<%= shoe._id %> ">Update</a>
+        <a href="/shoes/update/<%= shoe._id %>">Update</a>
+        <form action="/shoes/delete/<%= shoe._id %>?_method=DELETE" method="POST">
+          <button type="submit">delete</button>
+        </form>
         </div>
         <% }) %>
     </body>

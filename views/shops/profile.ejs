@@ -1,0 +1,35 @@
+<%- include('../partials/html-head') %>
+  <% if (user) { %>
+    <%- include('../partials/dashboardNav') %>
+      <% } else { %>
+        <%- include('../partials/nav') %>
+          <% } %>
+
+            <body>
+              <div>
+                <img src="https://lh3.googleusercontent.com/a/AATXAJxUM750fvYHKFOQ7qwX7snuGoohTZqfKpJhyszb=s96-c "
+                  alt="avatar">
+                <h1>
+                  <%= profile.name %>
+                </h1>
+              </div>
+
+              <div>
+                <h3>
+                  <%= profile.name.split(' ').splice(0,1)%>' s Listings: </h3>
+                    <% profile.shoesListed.forEach(shoe=>{%>
+                      <div class="profile-listings">
+                        <h3>
+                          <a href="/shop/<%= shoe._id %>">
+                            <%= shoe.name%>
+                          </a>
+                        </h3>
+                        <a href="/shop/<%= shoe._id %>">
+                          <img src="<%= shoe.image %> " alt="Listing Image" class="all-listing-image">
+                        </a>
+                      </div>
+                      <% }) %>
+              </div>
+            </body>
+
+            </html>

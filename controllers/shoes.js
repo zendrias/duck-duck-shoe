@@ -1,3 +1,4 @@
+import { Profile } from '../models/profile.js'
 import { Shoe } from '../models/shoe.js'
 
 function index(req, res) {
@@ -15,7 +16,15 @@ function newShoe(req, res) {
 function create(req, res) {
   req.body.owner = req.user.profile._id
   Shoe.create(req.body)
-    .then(shoe => {
+    .then((shoe) => {
+      Profile.findById(req.user.profile._id)
+        .then(profile => {
+          console.log('PROFILE ONLY:  ', profile)
+          console.log('SHOE ID:  ', shoe._id)
+          profile.shoesListed.push(shoe._id)
+          console.log(profile.shoesListed)
+          profile.save()
+        })
       res.redirect('/dashboard')
     })
     .catch(err => {
@@ -23,7 +32,6 @@ function create(req, res) {
       res.redirect('/dashboard')
     })
 }
-
 
 function myListings(req, res) {
   console.log(req.user)
@@ -58,4 +66,11 @@ function updateForm(req, res) {
     )
 }
 
-export { index, newShoe as new, create, myListings, update, updateForm }
+function deleteShoe(req, res) {
+  Shoe.findByIdAndDelete(req.params.id)
+    .then(() => {
+      res.redirect('/shoes/mylistings')
+    })
+}
+
+export { index, newShoe as new, create, myListings, update, updateForm, deleteShoe as delete }

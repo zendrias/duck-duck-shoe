@@ -1,3 +1,4 @@
+import { Profile } from '../models/profile.js'
 import { Shoe } from '../models/shoe.js'
 
 function index(req, res) {
@@ -26,4 +27,16 @@ function show(req, res) {
     })
 }
 
-export { index, all, show }
+function profile(req, res) {
+  Profile.findById(req.params.id)
+    .populate('shoesListed')
+    .then(profile => {
+      console.log(profile)
+      res.render('shops/profile', {
+        profile,
+        title: `Profile View`
+      })
+    })
+}
+
+export { index, all, show, profile }

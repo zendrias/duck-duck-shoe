@@ -15,4 +15,5 @@ router.get('/mylistings', shoesCtrl.myListings)
 
 router.post('/create', shoesCtrl.create)
 
+router.delete('/delete/:id', shoesCtrl.delete)
 export { router }
