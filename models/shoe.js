@@ -25,6 +25,10 @@ const shoeSchema = new mongoose.Schema({
   },
   owner: {
     type: Schema.Types.ObjectId, 'ref': "Profile"
+  },
+  views: {
+    type: Number,
+    default: 0
   }
 }, {
   timestamps: true

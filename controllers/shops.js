@@ -20,6 +20,10 @@ function show(req, res) {
   Shoe.findById(req.params.id)
     .populate('owner')
     .then(shoe => {
+      shoe.views++
+      shoe.save()
+      console.log(shoe.views)
+      console.log(shoe)
       res.render('shops/show', {
         shoe,
         title: 'Details'
@@ -31,7 +35,6 @@ function profile(req, res) {
   Profile.findById(req.params.id)
     .populate('shoesListed')
     .then(profile => {
-      console.log(profile)
       res.render('shops/profile', {
         profile,
         title: `Profile View`

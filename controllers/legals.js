@@ -1,3 +1,5 @@
+import { Profile } from '../models/profile.js'
+
 function terms(req, res) {
   res.render('legals/termsofservice', {
     title: 'Terms Of Service'
@@ -5,9 +7,13 @@ function terms(req, res) {
 }
 
 function privacy(req, res) {
-  res.render('legals/privacypolicy', {
-    title: 'Terms Of Service'
-  })
+  Profile.findById(req.params.id)
+    .then(profile => {
+      res.render('legals/privacypolicy', {
+        title: 'Privacy Policy',
+        profile
+      })
+    })
 }
 
 function shipping(req, res) {
@@ -16,4 +22,11 @@ function shipping(req, res) {
   })
 }
 
-export { terms, privacy, shipping }
+
+function newPrivacy(req, res) {
+  res.render('legals/newPrivacy', {
+    title: 'Privacy Policy'
+  })
+}
+
+export { terms, privacy, shipping, newPrivacy }

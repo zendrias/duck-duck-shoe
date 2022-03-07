@@ -1,15 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('../partials/html-head') %>
+  <% if (user) { %>
+    <%- include('../partials/dashboardNav') %>
+      <% } else { %>
+        <%- include('../partials/nav') %>
+          <% } %>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+            <body>
+              <h1>Privacy Policy</h1>
 
-<body>
-  <h1>Privacy Policy</h1>
-</body>
+              <h3>
+                Manage Privacy Policy
+              </h3>
 
-</html>
+              <p>
+                <% if(profile.siteSetting) {%>
+
+                  <% } else { %>
+                    <h3>Create Your Privacy Policy!</h3>
+                    <% } %>
+              </p>
+              <a href="/legal/privacypolicy/new/<%= profile._id %> ">Here</a>
+            </body>
+
+            </html>

@@ -1,0 +1,14 @@
+<%- include('../partials/html-head') %>
+  <% if (user) { %>
+    <%- include('../partials/dashboardNav') %>
+      <% } else { %>
+        <%- include('../partials/nav') %>
+          <% } %>
+
+            <body>
+              <form action="/legal/privacy" method="POST">
+                <textarea name="privacy" id="privacy" cols="30" rows="10" placeholder="Here!"></textarea>
+              </form>
+            </body>
+
+            </html>

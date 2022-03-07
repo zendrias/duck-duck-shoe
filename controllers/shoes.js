@@ -19,11 +19,9 @@ function create(req, res) {
     .then((shoe) => {
       Profile.findById(req.user.profile._id)
         .then(profile => {
-          console.log('PROFILE ONLY:  ', profile)
-          console.log('SHOE ID:  ', shoe._id)
           profile.shoesListed.push(shoe._id)
-          console.log(profile.shoesListed)
           profile.save()
+          console.log(shoe)
         })
       res.redirect('/dashboard')
     })
@@ -34,7 +32,6 @@ function create(req, res) {
 }
 
 function myListings(req, res) {
-  console.log(req.user)
   Shoe.find({ owner: req.user.profile._id })
     .then(shoes => {
       res.render('shoes/myListings', {
@@ -42,7 +39,6 @@ function myListings(req, res) {
         shoes,
       })
     })
-
 }
 
 function update(req, res) {
@@ -73,4 +69,12 @@ function deleteShoe(req, res) {
     })
 }
 
-export { index, newShoe as new, create, myListings, update, updateForm, deleteShoe as delete }
+export {
+  index,
+  newShoe as new,
+  create,
+  myListings,
+  update,
+  updateForm,
+  deleteShoe as delete
+}
