@@ -3,9 +3,18 @@ import mongoose from 'mongoose'
 let Schema = mongoose.Schema
 
 const siteSettingsSchema = new mongoose.Schema({
-  privacyPolicy: String,
-  termsOfService: String,
-  shippingPolicy: String
+  privacyPolicy: {
+    type: String,
+    default: ''
+  },
+  termsOfService: {
+    type: String,
+    default: ''
+  },
+  shippingPolicy: {
+    type: String,
+    default: ''
+  }
 })
 
 const profileSchema = new mongoose.Schema({

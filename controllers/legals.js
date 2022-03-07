@@ -29,4 +29,13 @@ function newPrivacy(req, res) {
   })
 }
 
-export { terms, privacy, shipping, newPrivacy }
+function createPrivacy(req, res) {
+  Profile.findById(req.params.id)
+    .then(profile => {
+      profile.siteSettings.create(req.body)
+      console.log(profile.siteSettings)
+      res.redirect('/dashboard')
+    })
+}
+
+export { terms, privacy, shipping, newPrivacy, createPrivacy }

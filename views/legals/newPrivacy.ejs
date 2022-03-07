@@ -6,8 +6,11 @@
           <% } %>
 
             <body>
-              <form action="/legal/privacy" method="POST">
+              <form action="/legal/privacy/<%= user.profile._id %>" method="POST">
+                <h3>Write Your Policy Below</h3>
                 <textarea name="privacy" id="privacy" cols="30" rows="10" placeholder="Here!"></textarea>
+                <br>
+                <button type="submit">Submit</button>
               </form>
             </body>
 

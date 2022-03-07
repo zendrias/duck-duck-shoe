@@ -13,6 +13,6 @@ router.get('/privacypolicy/new/:id', isLoggedIn, legalsCtrl.newPrivacy)
 
 router.get('/shipping/:id', legalsCtrl.shipping)
 
-
+router.post('/privacy/:id', legalsCtrl.createPrivacy)
 
 export { router }
