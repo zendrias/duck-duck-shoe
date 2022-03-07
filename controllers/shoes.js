@@ -38,9 +38,12 @@ function myListings(req, res) {
 }
 
 function update(req, res) {
-  Shoe.findByIdAndUpdate(req.params.id, req.body)
+  Shoe.findById(req.params.id)
     .then(shoe => {
-      res.redirect('/shoes/mylistings')
+      shoe.updateOne(req.body, { new: true })
+        .then(() => {
+          res.redirect('/shoes/mylistings')
+        })
     })
 }
 

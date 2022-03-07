@@ -4,7 +4,7 @@
 
     <body>
       <h1>Update Listing</h1>
-      <form action="/shoes/update" method="POST">
+      <form action="/shoes/update/<%= shoe._id %> " method="POST">
         <label for="name">Shoe Name</label>
         <input type="text" name="name" required placeholder="Product Name" value="<%= shoe.name %> ">
         <br>
