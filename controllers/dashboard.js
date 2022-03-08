@@ -12,9 +12,15 @@ function index(req, res) {
 }
 
 function analytics(req, res) {
-  res.render('dashboards/analytics', {
-    title: 'My Analytics'
-  })
+  Profile.findById(req.params.id)
+    .populate('shoesListed')
+    .then(profile => {
+      console.log(profile)
+      res.render('dashboards/analytics', {
+        title: 'My Analytics',
+        profile
+      })
+    })
 }
 
 export {

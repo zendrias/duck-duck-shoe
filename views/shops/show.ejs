@@ -24,8 +24,7 @@
   <% if (user) { %>
     <form action="/shop/reserve/<%= user.profile._id %>" method="POST">
       <h3>Total Reservations</h3>
-      <p><%= user %> </p>
-    <p>XXX</p>
+    <p><%= shoe.reservations %> </p>
     <button type="submit">Reserve</button>
   <% } %>
   </form>

@@ -49,7 +49,6 @@ function reserve(req, res) {
       const shoeId = req.rawHeaders[19].split('/')[4]
       profile.shoesReserved.push(shoeId)
       profile.save()
-      // Find Shoe To Add A Reservation
       Shoe.findById(shoeId)
         .then(shoe => {
           shoe.reservations = shoe.reservations + 1

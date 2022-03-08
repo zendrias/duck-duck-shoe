@@ -4,6 +4,29 @@
 
     <body>
       <h1>Anayltics Here</h1>
+      <% let sum=0 %>
+        <% let resSum=0 %>
+          <div>
+            <h3>Views Per Listing</h3 <p>
+            </p>
+            <% profile.shoesListed.forEach(shoe=>{ %>
+              </p>
+              <%= shoe.name %> ---- <%= shoe.views %> view(s)
+                  </p>
+                  <% sum=shoe.views + sum %>
+                    <% }) %>
+          </div>
+          <h3>Total Listing Views ----- <%= sum %> view(s)
+          </h3>
+          <h3>Reservations Per Listing</h3>
+          <% profile.shoesListed.forEach(shoe=>{ %>
+            </p>
+            <%= shoe.name %> ---- <%= shoe.reservations %> Reservation(s)
+                </p>
+                <% resSum=shoe.reservations + resSum %>
+                  <% }) %>
+                    <h3>Total Listing Reservations --- <%= resSum %>
+                    </h3>
     </body>
 
     </html>

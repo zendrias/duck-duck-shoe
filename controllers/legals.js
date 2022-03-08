@@ -3,6 +3,13 @@ import { Profile } from '../models/profile.js'
 function newSettings(req, res) {
   Profile.findById(req.params.id)
     .then(profile => {
+      if (!profile.siteSettings.join('')) {
+        profile.siteSettings.push({
+          privacyPolicy: 'Not Set',
+          termsOfService: 'Not Set',
+          shipping: 'Not Set'
+        })
+      }
       res.render('legals/newSettings', {
         title: 'New Settings',
         profile
