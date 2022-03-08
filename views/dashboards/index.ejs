@@ -15,7 +15,8 @@
 <body>
   <div>
     <h1>
-      Welcome [ <%= user.profile.name.split(' ').splice(0,1)%>  ]
+      Welcome [ <a href="shop/profiles/<%= profile._id %> ">
+        <%= user.profile.name.split(' ').splice(0,1)%></a> ]
     </h1>
   </div>
   <a href="/shoes">Manage Products</a>

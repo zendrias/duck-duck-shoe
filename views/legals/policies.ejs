@@ -1,0 +1,19 @@
+<%- include('../partials/html-head') %>
+  <% if (user) { %>
+    <%- include('../partials/dashboardNav') %>
+      <% } else { %>
+        <%- include('../partials/nav') %>
+          <% } %>
+            <h1>Policies</h1>
+
+            <body>
+              <h3>Privacy Policy</h3>
+              <p>
+                <%= profile.siteSettings %>
+              </p>
+              <h3>Terms Of Service</h3>
+
+              <h3>Shipping Policy</h3>
+            </body>
+
+            </html>

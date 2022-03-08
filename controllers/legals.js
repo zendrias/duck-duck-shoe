@@ -1,41 +1,35 @@
 import { Profile } from '../models/profile.js'
 
-function terms(req, res) {
-  res.render('legals/termsofservice', {
-    title: 'Terms Of Service'
-  })
-}
-
-function privacy(req, res) {
-  Profile.findById(req.params.id)
+function newSettings(req, res) {
+  Profile.find(req.params.id)
     .then(profile => {
-      res.render('legals/privacypolicy', {
-        title: 'Privacy Policy',
+      res.render('legals/newSettings', {
+        title: 'New Settings',
         profile
       })
     })
-}
 
-function shipping(req, res) {
-  res.render('legals/shipping', {
-    title: 'Terms Of Service'
-  })
-}
-
-
-function newPrivacy(req, res) {
-  res.render('legals/newPrivacy', {
-    title: 'Privacy Policy'
-  })
 }
 
 function create(req, res) {
   Profile.findById(req.params.id)
     .then(profile => {
+      profile.siteSettings.splice(0, 1)
       profile.siteSettings.push(req.body)
+      profile.save()
       console.log(profile)
       res.redirect('/dashboard')
     })
 }
 
-export { terms, privacy, shipping, newPrivacy, create }
+function index(req, res) {
+  Profile.findById(req.params.id)
+    .then(profile => {
+      res.render('legals/policies', {
+        profile,
+        title: 'View Policies'
+      })
+    })
+}
+
+export { newSettings, create, index }

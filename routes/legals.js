@@ -5,14 +5,10 @@ import { isLoggedIn } from '../middleware/middleware.js'
 
 
 
-router.get('/termsofservice/:id', legalsCtrl.terms)
+router.get('/:id', legalsCtrl.index)
 
-router.get('/privacypolicy/:id', legalsCtrl.privacy)
+router.get('/settings/:id', isLoggedIn, legalsCtrl.newSettings)
 
-router.get('/settings/:id', isLoggedIn, legalsCtrl.newPrivacy)
-
-router.get('/shipping/:id', legalsCtrl.shipping)
-
-// router.post('//:id', legalsCtrl.createPrivacy)
+router.post('/settings/:id', legalsCtrl.create)
 
 export { router }
