@@ -1,0 +1,60 @@
+*{
+  margin:0;
+  padding:0;
+  text-align: center;
+}
+
+.total-container{
+  display: flex;
+  margin: 0 20px 0 100px;
+}
+
+.functions-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* .functions-container > div {
+  margin: 40px 0 40px 0;
+} */
+
+.description{
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+
+h1{
+  font-family: 'Courgette', cursive;
+  margin-bottom: 20px;
+  font-size: 45px;
+  margin-top: 10px;
+}
+
+.reservation{
+  margin-top: 10px;
+  border-top: solid rgb(235, 235, 235) 1px
+}
+img{
+  margin-right:50px;
+}
+
+button{
+
+}
+
+.size-selection{
+  display: flex;
+  justify-content: center;
+  border-top: solid rgb(235, 235, 235) 1px;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.size-selection > p{
+  margin-right: 20px;
+}
+
+.shoe-price{
+  margin-bottom: 30px;
+}

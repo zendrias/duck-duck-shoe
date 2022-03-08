@@ -1,4 +1,5 @@
 <%- include('../partials/html-head') %>
+  <link rel="stylesheet" href="/stylesheets/all.css" />
   <% if (user) { %>
     <%- include('../partials/dashboardNav') %>
       <% } else { %>
@@ -6,10 +7,10 @@
           <% } %>
 
             <body>
-              <h1>All Shoes Here</h1>
+              <h1>Duck Duck Designer Shoes</h1>
               <div class="container">
                 <% shoes.forEach(shoe=>{%>
-                  <a href="/shop/<%= shoe._id %> ">
+                  <a class="shoe-link" href="/shop/<%= shoe._id %> ">
                     <div class="product-cards">
                       <img src="<%= shoe.image %>" alt="Listing Image" class="all-listing-image">
                       <p>

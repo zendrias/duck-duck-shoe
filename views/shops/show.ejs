@@ -1,4 +1,5 @@
 <%- include('../partials/html-head') %>
+  <link rel="stylesheet" href="/stylesheets/show.css" />
   <% if (user) { %>
     <%- include('../partials/dashboardNav') %>
       <% } else { %>
@@ -6,21 +7,27 @@
           <% } %>
 
             <body>
-              <div>
-                <img src="<%= shoe.image %> " alt="Listing Image" class="listing-img">
-              </div>
-              <div>
-                <h3>
-                  <%= shoe.name %>
-                </h3>
-                <p>Select Size</p>
-                <select name="size" id="size-selection">
-                  <% shoe.size.split(', ').forEach(size =>{ %> 
+              <div class="total-container">
+                <div class="product-page-img">
+                  <img src="<%= shoe.image %> " alt="Listing Image" class="listing-img">
+                </div>
+                <div class="functions-container">
+                  <div>
+                    <h1>
+                      <%= shoe.name %>
+                    </h1>
+                    <h3 class="shoe-price">$<%= shoe.price %>
+                    </h3>
+                    <div class="size-selection">
+                      <p>Select Your Size</p>
+                      <select name="size" id="size-selection">
+                        <% shoe.size.split(', ').forEach(size =>{ %> 
                   <option value="<%= size %> "><%= size %></option>
                   <% }) %> 
                 </select>
+              </div> 
               </div>
-<div>
+<div class="reservation">
   <% if (user) { %>
     <form action="/shop/reserve/<%= user.profile._id %>" method="POST">
       <h3>Total Reservations</h3>
@@ -29,14 +36,18 @@
   <% } %>
   </form>
 </div>
-<div>
+<div class="description">
   <h3>Description</h3>
   <p>
     <%= shoe.description %> 
   </p>
+  <br>
+  <br>
   <p>
     Courtesy of <a href="profiles/<%= shoe.owner._id %> "><%= shoe.owner.name %></a> 
   </p>
+</div>
+</div>
 </div>
 
             </body>

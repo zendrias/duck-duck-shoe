@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+div.product-cards{
+  width: 250px;
+  height: 400px;
+  border: rgb(226, 226, 226) 1px solid
+}
+
+img.all-listing-image{
+  width:240px;
+  height: 300px;
+}
+
+
+div.product-cards > a{
+  text-decoration: none;
+}
+
+div.product-cards > a > p{
+  color: black;
+  text-decoration: none;
+  font-size: 25px;
+  margin-top:7px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+
+h1{
+  font-family: 'Courgette', cursive;
+}
