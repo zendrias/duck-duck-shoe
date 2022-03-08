@@ -152,7 +152,7 @@ a{
 
 .dashboard-nav{
 border: #00B7FF solid 2px;
-border-radius: 10px;
+/* border-radius: 10px; */
 width: 100%;
 display: flex;
 align-items: center;
