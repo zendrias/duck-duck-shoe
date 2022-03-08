@@ -1,27 +1,29 @@
 <%- include('../partials/html-head') %>
+  <link rel="stylesheet" href="/stylesheets/dashboard.css" />
   <%- include('../partials/dashboardNav') %>
     <title>
       <%= user.profile.name %>'s Dashboard
     </title>
 
     <body>
-      <div>
-        <h1>
-          Welcome [ <a href="shop/profiles/<%= profile._id %> ">
-            <%= user.profile.name.split(' ').splice(0,1)%></a> ]
-    </h1>
-  </div>
+      <div class="total-container">
+        <div class="welcome-message">
+          <h1>
+            Welcome [ <a href="shop/profiles/<%= profile._id %> ">
+              <%= user.profile.name.split(' ').splice(0,1)%></a> ]
+          </h1>
+        </div>
   <a href="/shoes">Manage Products</a>
   <br>
   <br>
   <a href="dashboard/analytics/<%= user.profile._id %> ">Analytics</a>
   <br>
-  <div>
+      <div>
 <h2>Manage Legal Pages</h2>
 <a href="legal/settings/<%= user.profile._id %>">Manage</a>
-  </div>
+      </div>
   
-
+      </div>
 </body>
 
 </html>
