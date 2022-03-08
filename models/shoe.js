@@ -21,7 +21,8 @@ const shoeSchema = new mongoose.Schema({
     required: true
   },
   reservations: {
-    type: Number
+    type: Number,
+    default: 0
   },
   owner: {
     type: Schema.Types.ObjectId, 'ref': "Profile"

@@ -22,11 +22,11 @@ function show(req, res) {
     .then(shoe => {
       shoe.views++
       shoe.save()
-      console.log(shoe.views)
       console.log(shoe)
       res.render('shops/show', {
         shoe,
-        title: 'Details'
+        title: 'Details',
+        user: req.user
       })
     })
 }
@@ -34,6 +34,7 @@ function show(req, res) {
 function profile(req, res) {
   Profile.findById(req.params.id)
     .populate('shoesListed')
+    .populate('shoesReserved')
     .then(profile => {
       res.render('shops/profile', {
         profile,
@@ -42,4 +43,21 @@ function profile(req, res) {
     })
 }
 
-export { index, all, show, profile }
+function reserve(req, res) {
+  Profile.findById(req.params.id)
+    .then(profile => {
+      const shoeId = req.rawHeaders[19].split('/')[4]
+      profile.shoesReserved.push(shoeId)
+      profile.save()
+      // Find Shoe To Add A Reservation
+      Shoe.findById(shoeId)
+        .then(shoe => {
+          shoe.reservations = shoe.reservations + 1
+          shoe.save()
+          console.log(shoe)
+          res.redirect(`/shop/${shoeId}`)
+        })
+    })
+}
+
+export { index, all, show, profile, reserve }

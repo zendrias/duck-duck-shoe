@@ -5,15 +5,15 @@ let Schema = mongoose.Schema
 const siteSettingsSchema = new mongoose.Schema({
   privacyPolicy: {
     type: String,
-    default: 'Privacy Policy'
+    default: 'Not Set'
   },
   termsOfService: {
     type: String,
-    default: 'Terms Of Service'
+    default: 'Not Set'
   },
   shipping: {
     type: String,
-    default: 'Shipping Policy'
+    default: 'Not Set'
   }
 })
 
@@ -24,6 +24,9 @@ const profileSchema = new mongoose.Schema({
   shoesListed: {
     type: [Schema.Types.ObjectId], "ref": "Shoe"
   },
+  shoesReserved: {
+    type: [Schema.Types.ObjectId], "ref": "Shoe"
+  }
 }, {
   timestamps: true
 })

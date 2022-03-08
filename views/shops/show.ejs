@@ -21,9 +21,14 @@
                 </select>
               </div>
 <div>
-  <h3>Total Reservations</h3>
-  <p>XXX</p>
-  <button>Reserve</button>
+  <% if (user) { %>
+    <form action="/shop/reserve/<%= user.profile._id %>" method="POST">
+      <h3>Total Reservations</h3>
+      <p><%= user %> </p>
+    <p>XXX</p>
+    <button type="submit">Reserve</button>
+  <% } %>
+  </form>
 </div>
 <div>
   <h3>Description</h3>

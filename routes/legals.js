@@ -5,7 +5,7 @@ import { isLoggedIn } from '../middleware/middleware.js'
 
 
 
-router.get('/:id', legalsCtrl.index)
+router.get('/:id', isLoggedIn, legalsCtrl.index)
 
 router.get('/settings/:id', isLoggedIn, legalsCtrl.newSettings)
 

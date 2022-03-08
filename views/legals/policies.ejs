@@ -9,11 +9,38 @@
             <body>
               <h3>Privacy Policy</h3>
               <p>
-                <%= profile.siteSettings %>
+                <% if (profile.siteSettings[0].privacyPolicy==='Not Set' ) { %>
+                  <p>
+                    <%= profile.name %>'s Privacy Policy Is Empty!
+                  </p>
+                  <% } else { %>
+                    <p>
+                      <%= profile.siteSettings[0].privacyPolicy %>
+                    </p>
+                    <% } %>
               </p>
               <h3>Terms Of Service</h3>
-
+              <p>
+                <% if (profile.siteSettings[0].termsOfService==='Not Set' ) { %>
+                  <p>
+                    <%= profile.name %>'s Terms Of Service Is Empty!
+                  </p>
+                  <% } else { %>
+                    <p>
+                      <%= profile.siteSettings[0].termsOfService %>
+                    </p>
+                    <% } %>
+              </p>
               <h3>Shipping Policy</h3>
+              <% if (profile.siteSettings[0].shipping==='Not Set' ) { %>
+                <p>
+                  <%= profile.name %>'s Shipping Policy Is Empty!
+                </p>
+                <% } else { %>
+                  <p>
+                    <%= profile.siteSettings[0].shipping %>
+                  </p>
+                  <% } %>
             </body>
 
             </html>

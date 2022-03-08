@@ -8,13 +8,16 @@
             <body>
               <form action="/legal/settings/<%= user.profile._id %>" method="POST">
                 <h3>Write Your Privacy Policy Below</h3>
-                <textarea name="privacyPolicy" id="privacy" cols="50" rows="10" placeholder="Here!"></textarea>
+                <textarea name="privacyPolicy" id="privacy" cols="50" rows="10"
+                  placeholder="Here!"><%= profile.siteSettings[0].privacyPolicy %></textarea>
                 <br>
                 <h3>Write Your Terms Of Service Below</h3>
-                <textarea name="termsOfService" id="termsOfService" cols="50" rows="10" placeholder="Here!"></textarea>
+                <textarea name="termsOfService" id="termsOfService" cols="50" rows="10"
+                  placeholder="Here!"><%= profile.siteSettings[0].termsOfService %></textarea>
                 <br>
                 <h3>Shipping Policy</h3>
-                <textarea name="shipping" id="shipping" cols="50" rows="10" placeholder="Here!"></textarea>
+                <textarea name="shipping" id="shipping" cols="50" rows="10"
+                  placeholder="Here!"><%= profile.siteSettings[0].shipping %></textarea>
                 <button type="submit">Submit</button>
               </form>
             </body>

@@ -1,7 +1,7 @@
 import { Profile } from '../models/profile.js'
 
 function newSettings(req, res) {
-  Profile.find(req.params.id)
+  Profile.findById(req.params.id)
     .then(profile => {
       res.render('legals/newSettings', {
         title: 'New Settings',
