@@ -4,12 +4,16 @@
 }
 
 .welcome-message{
-  /* text-align: center; */
+  display: flex;
   margin: 40px 15px;
   word-spacing: 30px;
   border: 3px solid black;
-  /* border-bottom: 1px solid black; */
   padding: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.fa-solid{
+  font-size: 40px;
 }
 
 .welcome-message > h1 > a {

@@ -4,14 +4,26 @@
     <title>
       <%= user.profile.name %>'s Dashboard
     </title>
+    <!-- Views Calculation -->
+    <% const totalViews=0 %>
+      <% const views=profile.shoesListed.forEach(shoe=>{
+        totalViews = shoe.views + totalViews
+        }) %>
 
-    <body>
-      <div class="total-container">
-        <div class="welcome-message">
-          <h1>
-            Welcome [ <a href="shop/profiles/<%= profile._id %> ">
-              <%= user.profile.name.split(' ').splice(0,1)%></a> ]
+        <body>
+          <div class="total-container">
+            <div class="welcome-message">
+              <h1>
+                Welcome [ <a href="shop/profiles/<%= profile._id %> ">
+                  <%= user.profile.name.split(' ').splice(0,1)%></a> ]
           </h1>
+          <h1 class="money">
+            <i class="fa-thin fa-dollar-sign"></i>
+            <i class="fa-thin fa-dollar-sign"></i>
+            <i class="fa-thin fa-dollar-sign"></i>
+            <i class="fa-thin fa-dollar-sign"></i>
+          </h1>
+          <h1>Views [  ]</h1>
         </div>
   <a href="/shoes">Manage Products</a>
   <br>
