@@ -161,10 +161,15 @@ a.here{
 
 .copywrite{
   height: 25vh;
-  background: linear-gradient( rgba(245, 245, 245, 0), #baebff);
+  /* background: linear-gradient( rgba(245, 245, 245, 0), #baebff); */
   display: flex;
   justify-content: right;
   align-items: flex-end;
+  position:fixed;
+  left: 0;
+  bottom: 0 ;
+  width: 100%;
+  z-index: -1;
 }
 
 .copywrite span {
