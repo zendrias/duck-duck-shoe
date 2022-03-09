@@ -196,8 +196,20 @@ table td {
 
 table{
   border-collapse: collapse;
+  font-size: 20px;
 }
 
 table tr:nth-child(odd) td {
   background-color: lightgray;
 }
+
+.analytics-container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.title{
+  text-align: center;
+}
+
