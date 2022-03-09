@@ -4,6 +4,10 @@
   text-align: center;
 }
 
+body{
+  background-color: white;
+}
+
 .total-container{
   display: flex;
   margin: 0 20px 0 100px;
@@ -15,9 +19,6 @@
   justify-content: center;
 }
 
-/* .functions-container > div {
-  margin: 40px 0 40px 0;
-} */
 
 .description{
   margin-top: 15px;

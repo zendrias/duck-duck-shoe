@@ -1,11 +1,17 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(245, 245, 245);
 }
 
 nav{
   margin: 10px;
   width: auto;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .welcome-message{
@@ -42,12 +48,91 @@ span{
 .log-out{
   padding: 5px;
   background-color: #00B7FF;
-  border-radius: 7px;
+  border-radius: 4px;
   color: white;
+  text-decoration: none;
+  transition: .25s ease-in-out;
 }
 
 .log-out:hover{
   color: #00B7FF;
   background-color: white;
-  border: solid 1px  #00B7FF,
+  border: solid 1px #00B7FF;
+}
+
+.stats-flex{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.analytics, .manage-products{
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px lightgray solid;
+  width: 40vw;
+  max-width: 525px;
+  text-align: center;
+  height: 40vh;
+  max-height: 700px;
+  padding: 10px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.analytics a , .manage-products a {
+  text-decoration: none;
+  color:black;
+  font-size: 40px;
+}
+
+.list > a {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.list{
+  display: flex ;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+}
+
+.checks{
+  display: flex;
+  width: auto;
+  justify-content: space-evenly;
+}
+
+.links > a {
+  font-size: 20px;
+}
+
+.here{
+  padding: 7px;
+  background-color: #00B7FF;
+  border: 1px white solid;
+  border-radius: 5px;
+  color: white;
+  width: fit-content;
+  margin: 15px;
+  transition: .25s ease-in-out;
+}
+
+.here:hover{
+  color: #00B7FF;
+  background-color: rgb(245, 245, 245);
+  border: #00B7FF 1px solid;
+  padding: 7px calc(7px + 5px);
+}
+
+a.here{
+  color: white;
+}
+
+.analytics > i {
+  font-size: 20px;
+  margin: 10px;
 }

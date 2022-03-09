@@ -4,6 +4,7 @@ function index(req, res) {
   User.findById(req.user._id)
     .populate('profile')
     .then(user => {
+      console.log(user.profile)
       res.render('dashboards/index', {
         title: 'dashboard',
         profile: user.profile

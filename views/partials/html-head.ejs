@@ -12,7 +12,11 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Rajdhani:wght@300&display=swap');
   </style>
+
   <link rel="stylesheet" href="/stylesheets/style.css" />
-  <title>
-    <%= title %>
-  </title>
+  <% if (user) { %>
+    <link rel="stylesheet" href="/stylesheets/dashboard.css" />
+    <% } %>
+      <title>
+        <%= title %>
+      </title>

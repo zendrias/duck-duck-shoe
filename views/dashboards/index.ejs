@@ -14,26 +14,48 @@
           </h1>
           <h1 class="money">
             <span>
-            <i class="fa-thin fa-dollar-sign"></i>
-            <i class="fa-thin fa-dollar-sign"></i>
-            <i class="fa-thin fa-dollar-sign"></i>
-            <i class="fa-thin fa-dollar-sign"></i>
-            <i class="fa-thin fa-dollar-sign"></i>
-          </span>
+              <i class="fa-thin fa-dollar-sign"></i>
+              <i class="fa-thin fa-dollar-sign"></i>
+            </span>
           </h1>
-          <h1>Listings <span>[</span> <div id="listings"><%= profile.shoesListed.length %></div> <span>]</span></h1>
+          <h1>Lifetime-Listings <span>[</span> <div id="listings"><%= profile.shoesListed.length %></div> <span>]</span>
+          </h1>
         </div>
-  <a href="/shoes">Manage Products</a>
-  <br>
-  <br>
-  <a href="dashboard/analytics/<%= user.profile._id %> ">Analytics</a>
-  <br>
+        <div class="stats-flex">
+          <div class="manage-products">
+            <a href="/shoes"><span>[</span>
+              Manage Products
+              <span>]</span>
+            </a>
+            <h3>Make product update or create new listings here!</h3>
+            <div class="checks">
+              <p><i class="fa-solid fa-check"></i></p>
+            </div>
+            <div class="list">
+              <h3 class="links"><a href="/shoes/new"><span>[</span>  List A Shoe!  <span>]</span></a></h3>
+              <a class="here" href="/shoes/new">Here</a>
+              <h3 class="links"><a href="/shoes/mylistings"><span>[</span>  Update Or Delete An Existing Listing  <span>]</span></a></h3>
+              <a class="here" href="/shoes/mylistings">Here</a>
+            </div>
+          </div>
+          <div class="analytics">
+            <a href="dashboard/analytics/<%= user.profile._id %> ">
+              <span>[</span>
+              Analytics
+              <span>]</span>
+            </a>
+            <h3>We' re rooting for your success!</h3>
+                <i class="fa-solid fa-chart-line"></i>
+                <p>Make data driven decisions to maximize the impact of each listing</p>
+        </div>
+      </div>
       <div>
-<h2>Manage Legal Pages</h2>
-<a href="legal/settings/<%= user.profile._id %>">Manage</a>
+        <h2>Manage Legal Pages</h2>
+        <a href="legal/settings/<%= user.profile._id %>">Manage</a>
       </div>
-  
-      </div>
-</body>
 
-</html>
+
+      </div>
+    </body>
+
+    </html>
