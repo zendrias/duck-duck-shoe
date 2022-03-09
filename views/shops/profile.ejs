@@ -45,10 +45,16 @@
                         <a href="/shop/<%= shoe._id %>">
                           <img src="<%= shoe.image %> " alt="Listing Image" class="all-listing-image">
                         </a>
-                        <p><a href="/shop/<%= shoe._id %>">
-                            <%= shoe.name%>
-                          </a>-- [$<%= shoe.price %>]
-                        </p>
+                        <div class="shoe-name">
+                          <h3>
+                            <a href="/shop/<%= shoe._id %>">
+                              <%= shoe.name%>
+                            </a>
+                            <p>
+                              $<%= shoe.price %>
+                            </p>
+                          </h3>
+                        </div>
                       </div>
                       <% }) %>
                   </div>
