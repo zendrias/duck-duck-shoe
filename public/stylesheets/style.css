@@ -225,7 +225,7 @@ table tr:nth-child(odd) td {
 }
 
 .copywrite{
-  height: 25vh;
+  height: fit-content;
   /* background: linear-gradient( rgba(245, 245, 245, 0), #baebff); */
   display: flex;
   justify-content: right;
@@ -239,4 +239,13 @@ table tr:nth-child(odd) td {
 
 .copywrite span {
   color: #0090c9;
+}
+
+image{
+  z-index: -1;
+}
+
+.copywrite a {
+  color:black;
+  text-decoration: none;
 }

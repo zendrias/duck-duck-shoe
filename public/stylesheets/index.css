@@ -29,10 +29,11 @@ nav  a{
   border: none;
   border-top: 1px solid white;
   border-radius: none;
-  width: 100%;
+  width: 95vw;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  border: yellow 1px solid;
   }
 
   .dashboard-nav > h1 {
@@ -109,4 +110,16 @@ button.shop-now:hover{
   color: #ffffff;
   background-color: rgb(0, 0, 0);
   border: #ffffff 1px solid;
+}
+
+.copywrite{
+  color: white;
+}
+
+.copywrite  a {
+  color: white;
+}
+
+body{
+  width: 98vw;
 }
