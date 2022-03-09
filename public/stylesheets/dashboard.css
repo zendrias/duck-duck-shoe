@@ -18,7 +18,7 @@ nav{
   display: flex;
   margin: 40px 15px;
   word-spacing: 30px;
-  border: 3px solid rgb(219, 219, 219);
+  border: 3px solid #00B7FF;
   padding: 20px;
   align-items: center;
   justify-content: space-evenly;
@@ -135,4 +135,38 @@ a.here{
 .analytics > i {
   font-size: 20px;
   margin: 10px;
+}
+
+.view-more{
+  margin-top: 10px;
+}
+
+.mt-30{
+  margin-top: 30px
+}
+
+.legal{
+  width: auto;
+  margin: 10px;
+  border: 1px lightgrey solid;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* padding: 10px; */
+}
+
+.legal > a {
+  text-decoration: none;
+}
+
+.copywrite{
+  height: 20vh;
+  background: linear-gradient( #f5f5f5, #a2e5ff);
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+}
+
+.copywrite span {
+  color: #0090c9;
 }

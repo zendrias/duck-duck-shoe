@@ -181,3 +181,23 @@ justify-content: space-evenly;
 .listing-img{
   width: 400px;
 }
+
+table th {
+  text-align: left;
+  background-color: #00B7FF ;
+  color: white;
+  padding: 5px 35px 5px 10px;
+}
+
+table td {
+  border: 1px solid lightgray;
+  padding: 5px 10px;
+}
+
+table{
+  border-collapse: collapse;
+}
+
+table tr:nth-child(odd) td {
+  background-color: lightgray;
+}

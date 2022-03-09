@@ -27,7 +27,7 @@
               Manage Products
               <span>]</span>
             </a>
-            <h3>Make product update or create new listings here!</h3>
+            <h3>Make product updates or create new listings here!</h3>
             <div class="checks">
               <p><i class="fa-solid fa-check"></i></p>
             </div>
@@ -47,15 +47,21 @@
             <h3>We' re rooting for your success!</h3>
                 <i class="fa-solid fa-chart-line"></i>
                 <p>Make data driven decisions to maximize the impact of each listing</p>
+                <h3 class="links view-more"><a href="/dashboard/analytics/<%= user.profile._id %> "><span>[</span> View
+                    More
+                    <span>]</span></a></h3>
+                <div class="links mt-30">
+                  <a class="here" href="/dashboard/analytics/<%= user.profile._id %> ">Here</a>
+                </div>
         </div>
       </div>
-      <div>
-        <h2>Manage Legal Pages</h2>
-        <a href="legal/settings/<%= user.profile._id %>">Manage</a>
+      <div class="legal links">
+        <h2>
+          <span>[</span> Manage Legal Pages <span>]</span>
+        </h2>
+        <a class="here" href="legal/settings/<%= user.profile._id %>">Manage</a>
       </div>
 
 
       </div>
-    </body>
-
-    </html>
+      <%- include('../partials/footer') %>
