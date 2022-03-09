@@ -223,3 +223,20 @@ table tr:nth-child(odd) td {
   justify-content: space-evenly;
   padding-bottom: 25vh;
 }
+
+.copywrite{
+  height: 25vh;
+  /* background: linear-gradient( rgba(245, 245, 245, 0), #baebff); */
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  position:fixed;
+  left: 0;
+  bottom: 0 ;
+  width: 100%;
+  z-index: 1;
+}
+
+.copywrite span {
+  color: #0090c9;
+}
