@@ -35,3 +35,14 @@ body{
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.policies{
+  display: flex;
+  justify-content: center;
+  padding: 3vw;
+  flex-wrap: wrap;
+}
+
+.policies  a{
+margin: 0 5vw;
+}

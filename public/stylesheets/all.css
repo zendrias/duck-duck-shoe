@@ -10,14 +10,10 @@ body{
 div.product-cards{
   width: 250px;
   min-height: 400px;
-  border:none
-  /* border: rgb(226, 226, 226) 1px solid; */
+  border:none;
   transition: .25s ease-in-out;
 }
 
-/* div.product-cards:hover{
-  border: black 1px solid;
-} */
 
 img.all-listing-image{
   width:240px;
