@@ -221,4 +221,5 @@ table tr:nth-child(odd) td {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  padding-bottom: 25vh;
 }
