@@ -9,7 +9,7 @@
             <body>
               <h3>Privacy Policy</h3>
               <p>
-                <% if (!profile.siteSettings) { %>
+                <% if (!profile.siteSettings.toString()) { %>
                   <p>
                     <%= profile.name %>'s Privacy Policy Is Empty!
                   </p>
@@ -21,7 +21,7 @@
               </p>
               <h3>Terms Of Service</h3>
               <p>
-                <% if (!profile.siteSettings) { %>
+                <% if (!profile.siteSettings.toString()) { %>
                   <p>
                     <%= profile.name %>'s Terms Of Service Is Empty!
                   </p>
@@ -32,7 +32,7 @@
                     <% } %>
               </p>
               <h3>Shipping Policy</h3>
-              <% if (!profile.siteSettings) { %>
+              <% if (!profile.siteSettings.toString()) { %>
                 <p>
                   <%= profile.name %>'s Shipping Policy Is Empty!
                 </p>
@@ -41,6 +41,7 @@
                     <%= profile.siteSettings[0].shipping %>
                   </p>
                   <% } %>
+
             </body>
 
 

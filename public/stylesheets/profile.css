@@ -41,8 +41,22 @@ body{
   justify-content: center;
   padding: 3vw;
   flex-wrap: wrap;
+align-items: center;
 }
 
 .policies  a{
 margin: 0 5vw;
+text-decoration: none;
+padding: 5px;
+background-color: #00B7FF;
+color: white;
+border: white 1px solid;
+border-radius: 7px;
+transition: .25s ease-in-out;
+}
+
+.policies  a:hover{
+background-color: white;
+border: 1px solid #00B7FF;
+color: #00B7FF;
 }
