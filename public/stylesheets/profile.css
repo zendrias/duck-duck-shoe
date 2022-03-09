@@ -1,0 +1,37 @@
+body{
+  background-color: white;
+  text-align: center;
+}
+
+.profile-img{
+  border-radius: 50%;
+  width: 30vh;
+}
+
+.profile-listings{
+  width:27vw;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  margin: 10px;
+  /* border: lightgray 1px solid; */
+  align-items: center;
+}
+
+.profile-listings a {
+  color: black;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.shoe-name{
+  text-align: center;
+  margin-left: 2vw;
+}
+
+.total-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

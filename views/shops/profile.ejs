@@ -1,4 +1,5 @@
 <%- include('../partials/html-head') %>
+  <link rel="stylesheet" href="/stylesheets/profile.css" />
   <% if (user) { %>
     <%- include('../partials/dashboardNav') %>
       <% } else { %>
@@ -7,36 +8,44 @@
 
             <body>
               <div>
-                <img src="<%= profile.avatar %>" alt="avatar">
+                <img class="profile-img" src="<%= profile.avatar %>" alt="avatar">
                 <h1>
                   <%= profile.name %>
                 </h1>
               </div>
-
-              <div>
-                <h3>
-                  <%= profile.name.split(' ').splice(0,1)%>' s Listings: </h3>
+              <h3>
+                <%= profile.name.split(' ').splice(0,1)%>' s Listings: </h3>
+                  <div class="total-flex">
                     <% profile.shoesListed.forEach(shoe=>{%>
                       <div class="profile-listings">
-                        <h3>
-                          <a href="/shop/<%= shoe._id %>">
-                            <%= shoe.name%>
-                          </a>
-                        </h3>
                         <a href="/shop/<%= shoe._id %>">
                           <img src="<%= shoe.image %> " alt="Listing Image" class="all-listing-image">
                         </a>
+                        <div class="shoe-name">
+                          <h3>
+                            <a href="/shop/<%= shoe._id %>">
+                              <%= shoe.name%>
+                            </a>
+                            <p>
+                              $<%= shoe.price %>
+                            </p>
+                          </h3>
+                        </div>
                       </div>
                       <% }) %>
-                        <h3>View Users Policies <a href="/legal/<%= profile._id %> ">Here</a></h3>
-                        <h3>Users Reserved Shoes</h3>
-                        <% profile.shoesReserved.forEach(shoe=>{ %>
-                          <p><a href="/shop/<%= shoe._id %>">
-                              <%= shoe.name%>
-                            </a>-- [$<%= shoe.price %>]
-                          </p>
-                          <% }) %>
-              </div>
+                  </div>
+                  <div class="policies">
+                    <h3>View Users Policies</h3>
+                    <a href="/legal/<%= profile._id %> ">Here</a>
+                  </div>
+                  <h3>Users Reserved Shoes</h3>
+                  <% profile.shoesReserved.forEach(shoe=>{ %>
+                    <p><a href="/shop/<%= shoe._id %>">
+                        <%= shoe.name%>
+                      </a>-- [$<%= shoe.price %>]
+                    </p>
+                    <% }) %>
+
             </body>
 
             </html>
