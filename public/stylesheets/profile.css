@@ -42,6 +42,8 @@ body{
   padding: 3vw;
   flex-wrap: wrap;
 align-items: center;
+border-bottom: #ebebeb 1px solid;
+border-top: #ebebeb 1px solid;
 }
 
 .policies  a{
@@ -59,4 +61,10 @@ transition: .25s ease-in-out;
 background-color: white;
 border: 1px solid #00B7FF;
 color: #00B7FF;
+}
+
+.reserved-shoes{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }

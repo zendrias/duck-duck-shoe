@@ -39,13 +39,19 @@
                     <a href="/legal/<%= profile._id %> ">Here</a>
                   </div>
                   <h3>Users Reserved Shoes</h3>
-                  <% profile.shoesReserved.forEach(shoe=>{ %>
-                    <p><a href="/shop/<%= shoe._id %>">
-                        <%= shoe.name%>
-                      </a>-- [$<%= shoe.price %>]
-                    </p>
-                    <% }) %>
-
+                  <div class="reserved-shoes">
+                    <% profile.shoesReserved.forEach(shoe=>{ %>
+                      <div class="bundle">
+                        <a href="/shop/<%= shoe._id %>">
+                          <img src="<%= shoe.image %> " alt="Listing Image" class="all-listing-image">
+                        </a>
+                        <p><a href="/shop/<%= shoe._id %>">
+                            <%= shoe.name%>
+                          </a>-- [$<%= shoe.price %>]
+                        </p>
+                      </div>
+                      <% }) %>
+                  </div>
             </body>
 
             </html>
