@@ -9,7 +9,7 @@
       <div class="analytics-container">
         <% let sum=0 %>
           <% let resSum=0 %>
-            <div>
+            <div class="views-table">
               <h3>Views Per Listing</h3>
               <table>
                 <tr>
@@ -50,17 +50,15 @@
               </table>
             </div>
             <div class="total-stats">
-              <h3>
+              <h2>
                 Shoes Listed --- <%= profile.shoesListed.length %>
-              </h3>
-              <h3>
+              </h2>
+              <h2>
                 Total Listing Views ----- <%= sum %> view(s)
-              </h3>
-              <h3>
+              </h2>
+              <h2>
                 Total Listing Reservations --- <%= resSum %>
-              </h3>
+              </h2>
             </div>
       </div>
-    </body>
-
-    </html>
+      <%- include('../partials/footer') %>

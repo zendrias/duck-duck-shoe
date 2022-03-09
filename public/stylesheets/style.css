@@ -213,3 +213,12 @@ table tr:nth-child(odd) td {
   text-align: center;
 }
 
+.reservations, .views-table{
+  text-align: center;
+}
+
+.total-stats{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
