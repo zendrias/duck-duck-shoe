@@ -72,10 +72,10 @@ span{
   width: 40vw;
   max-width: 525px;
   text-align: center;
-  height: 40vh;
+  height: calc( fit-content + 30px);
   max-height: 700px;
+  min-height: fit-content;
   padding: 10px;
-  min-height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
