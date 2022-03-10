@@ -4,18 +4,18 @@
 
     <body>
       <h1>Add A Shoe!</h1>
-      <form action="/shoes/create" method="POST">
+      <form action="/shoes/create" method="POST" class="new-form">
         <label for="name">Shoe Name</label>
-        <input type="text" name="name" required placeholder="Product Name">
+        <input type="text" name="name" required placeholder="Product Name" class="new-input">
         <br>
         <label for="price">Set A Price</label>
-        <input type="Number" name="price" required placeholder="$">
+        <input type="Number" name="price" required placeholder="$" class="new-input">
         <br>
         <label for="size">Available Sizes</label>
-        <input name="size" type="text" required placeholder="Separate Each Size With A Comma">
+        <input name="size" type="text" required placeholder="Separate Each Size With A Comma" class="new-input">
         <br>
         <label for="image">Product Image Link</label>
-        <input type="text" name="image" required placeholder="URL Only">
+        <input type="text" name="image" required placeholder="URL Only" class="new-input">
         <br>
         <h3>Brief Description</h3>
         <textarea id="description" name="description" rows="9" cols="80"

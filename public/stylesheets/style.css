@@ -291,3 +291,19 @@ textarea{
   background-color: #ffffff;
   color:#0090c9;
 }
+
+.new-input{
+  width: 50vw;
+  margin: 20px;
+  height: 40px;
+  border-radius: 15px;
+  border: 1px #00B7FF solid;
+  padding: 5px 10px;
+}
+
+.new-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
