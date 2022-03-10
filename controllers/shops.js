@@ -22,7 +22,6 @@ function show(req, res) {
     .then(shoe => {
       shoe.views++
       shoe.save()
-      console.log(shoe)
       res.render('shops/show', {
         shoe,
         title: 'Details',
@@ -53,7 +52,6 @@ function reserve(req, res) {
         .then(shoe => {
           shoe.reservations = shoe.reservations + 1
           shoe.save()
-          console.log(shoe)
           res.redirect(`/shop/${shoeId}`)
         })
     })

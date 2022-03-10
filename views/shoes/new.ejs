@@ -3,7 +3,7 @@
 
 
     <body>
-      <h1>Add A Shoe!</h1>
+      <h1 class="title">Add A Shoe!</h1>
       <form action="/shoes/create" method="POST" class="new-form">
         <label for="name">Shoe Name</label>
         <input type="text" name="name" required placeholder="Product Name" class="new-input">
@@ -21,7 +21,9 @@
         <textarea id="description" name="description" rows="9" cols="80"
           placeholder="A Great Description Boosts Reservations By 47%!"></textarea>
         <br>
-        <button>Create Listing!</button>
+        <div class="button mt10">
+          <button>Create Listing!</button>
+        </div>
       </form>
     </body>
 

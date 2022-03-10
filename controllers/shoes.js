@@ -21,7 +21,6 @@ function create(req, res) {
         .then(profile => {
           profile.shoesListed.push(shoe._id)
           profile.save()
-          console.log(profile)
         })
       res.redirect('/dashboard')
     })

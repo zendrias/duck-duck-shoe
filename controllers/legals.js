@@ -24,7 +24,6 @@ function create(req, res) {
       profile.siteSettings.splice(0, 1)
       profile.siteSettings.push(req.body)
       profile.save()
-      console.log(profile)
       res.redirect('/dashboard')
     })
 }

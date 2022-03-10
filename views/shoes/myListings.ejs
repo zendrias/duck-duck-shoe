@@ -1,25 +1,35 @@
 <%- include('../partials/html-head') %>
   <%- include('../partials/dashboardNav') %>
 
-    <body>
-      <h1>Your Listings</h1>
-      <% shoes.forEach(shoe=> { %>
-        <a href="/shop/<%= shoe._id %>">
-          <div class="product-cards">
-            <img src="<%= shoe.image %>" alt="Listing Image" class="all-listing-image">
-            <p>
-              <%= shoe.name %>
-            </p>
-        </a>
-        <p>
-          $<%= shoe.price %>
-        </p>
-        <a href="/shoes/update/<%= shoe._id %>">Update</a>
-        <form action="/shoes/delete/<%= shoe._id %>?_method=DELETE" method="POST">
-          <button type="submit">delete</button>
-        </form>
-        </div>
-        <% }) %>
+    <body class="white">
+      <h1 class="title">Your Listings</h1>
+      <div class="my-listings-flex">
+        <% shoes.forEach(shoe=> { %>
+          <div class="profile-listings my-listings">
+            <a href="/shop/<%= shoe._id %>">
+              <img src="<%= shoe.image %> " alt="Listing Image" class="all-listing-image">
+            </a>
+            <div class="shoe-name">
+              <h3>
+                <a href="/shop/<%= shoe._id %>">
+                  <%= shoe.name%>
+                </a>
+                <p>
+                  $<%= shoe.price %>
+                </p>
+              </h3>
+              <div class="flex-container-listings">
+                <a href="/shoes/update/<%= shoe._id %>">Update</a>
+                <form action="/shoes/delete/<%= shoe._id %>?_method=DELETE" method="POST">
+                  <button class="delete" type="submit">X</button>
+              </div>
+            </div>
+          </div>
+          </form>
+
+          <% }) %>
+      </div>
+      </div>
     </body>
 
     </html>

@@ -1,21 +1,6 @@
 import mongoose from 'mongoose'
-
+import { siteSettingsSchema } from './siteSettings.js'
 let Schema = mongoose.Schema
-
-const siteSettingsSchema = new mongoose.Schema({
-  privacyPolicy: {
-    type: String,
-    default: 'Not Set'
-  },
-  termsOfService: {
-    type: String,
-    default: 'Not Set'
-  },
-  shipping: {
-    type: String,
-    default: 'Not Set'
-  }
-})
 
 const profileSchema = new mongoose.Schema({
   name: String,

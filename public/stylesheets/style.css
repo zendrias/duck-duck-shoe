@@ -225,15 +225,10 @@ table tr:nth-child(odd) td {
 
 .copywrite{
   height: fit-content;
-  /* background: linear-gradient( rgba(245, 245, 245, 0), #baebff); */
   display: flex;
   justify-content: right;
   align-items: flex-end;
-  position:fixed;
-  left: 0;
-  bottom: 0 ;
-  width: 100%;
-  z-index: 1;
+  z-index: -2;
 }
 
 .copywrite span {
@@ -247,6 +242,7 @@ image{
 .copywrite a {
   color:black;
   text-decoration: none;
+  z-index: -2;
 }
 
 
@@ -306,4 +302,42 @@ textarea{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.mt10{
+  margin-top: 10px;
+}
+
+.white{
+  background-color: white;
+}
+
+.my-listings-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.my-listings{
+  margin: 20px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.shoe-name h3 a{
+  text-decoration: none;
+}
+
+.delete{
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 0, 0);
+  border: 1px solid red;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.flex-container-listings{
+  display:flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
