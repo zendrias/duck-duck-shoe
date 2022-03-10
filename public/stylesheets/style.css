@@ -248,3 +248,46 @@ image{
   color:black;
   text-decoration: none;
 }
+
+
+textarea{
+  border: 2px lightgrey solid;
+  resize: none;
+  padding: 7px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 10px;
+  background-color: rgb(243, 243, 243);
+}
+
+.policy-page{
+  background-color: white;
+}
+.policy-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.policy-flex > div{
+  margin-bottom: 10px;
+}
+
+.button{
+  text-align: center;
+}
+
+.button > button {
+  background-color: #00B7FF;
+  border: #0090c9 1px solid;
+  color:white;
+  padding: 5px;
+  border-radius: 5px;
+  transition: .25s ease-in-out;
+}
+
+.button > button:hover {
+  background-color: #ffffff;
+  color:#0090c9;
+}
