@@ -9,6 +9,10 @@ function index(req, res) {
         profile: user.profile
       })
     })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/')
+    })
 }
 
 function analytics(req, res) {
@@ -19,6 +23,10 @@ function analytics(req, res) {
         title: 'My Analytics',
         profile
       })
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/dashboard')
     })
 }
 

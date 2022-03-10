@@ -38,6 +38,10 @@ function myListings(req, res) {
         shoes,
       })
     })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/dashboard')
+    })
 }
 
 function update(req, res) {
@@ -48,6 +52,10 @@ function update(req, res) {
           res.redirect('/shoes/mylistings')
         })
     })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/dashboard')
+    })
 }
 
 function updateForm(req, res) {
@@ -57,14 +65,21 @@ function updateForm(req, res) {
         title: 'Update Shoe',
         shoe
       })
-    }
-    )
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/dashboard')
+    })
 }
 
 function deleteShoe(req, res) {
   Shoe.findByIdAndDelete(req.params.id)
     .then(() => {
       res.redirect('/shoes/mylistings')
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/dashboard')
     })
 }
 

@@ -26,6 +26,10 @@ function create(req, res) {
       profile.save()
       res.redirect('/dashboard')
     })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/dashboard')
+    })
 }
 
 function index(req, res) {
@@ -35,6 +39,10 @@ function index(req, res) {
         profile,
         title: 'View Policies'
       })
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/dashboard')
     })
 }
 

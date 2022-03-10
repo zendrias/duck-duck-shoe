@@ -28,6 +28,10 @@ function show(req, res) {
         user: req.user
       })
     })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/dashboard')
+    })
 }
 
 function profile(req, res) {
@@ -54,6 +58,10 @@ function reserve(req, res) {
           shoe.save()
           res.redirect(`/shop/${shoeId}`)
         })
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/dashboard')
     })
 }
 
