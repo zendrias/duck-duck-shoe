@@ -1,70 +1,38 @@
-# MEN Stack with OAuth Template
+# Duck Duck Shoe
 
-This is a MEN Stack template that includes OAuth.
+## About The Site 
+Duck Duck Shoe is a Ebay style website, where users can list items as well as view listings from others. Instead of purchasing items users can place reservations. I wanted also the users back-end to be similar to what is available in popular sites going into this.
 
-Use this to go build things! 🚀
+I decided to go with this style of site because I have built ecom-stores in the past using website templates, and I figured it would be neat to build something similar from scratch.
 
-## To Use This Template
+## Site Link
+### [Duck Duck Shoe](https://duck-duck-shoe.herokuapp.com/)
 
-__Replace `<name-of-your-app-here>` in the commands below with the name of your app!__
 
-```bash
-git clone https://github.com/SEI-Remote/men-stack-oauth-template.git <name-of-your-app-here>
-cd <name-of-your-app-here>
-```
 
-Once you are in the project directory:
+##  Wireframe
+  
+Image Here
 
-```bash
-rm -rf .git
-```
 
-Here's what your command line output should like after this step (note that the indicator that we are in a git repository is gone!)
 
-<img src="https://i.imgur.com/L47kNOZ.png" alt="The command line before and after running the rm -rf .git command. Before git:(main) is visible indiating that the directory contains a git repository, after the command it is not.">
 
-Re-initialize a git repository:
 
-```bash
-git init
-```
-Use whatever method you'd like to get your project on GitHub. If you're looking for speed though use the GitHub CLI to create a new project repository on GitHub:
+## Technologies Used:
 
-```bash
-gh repo create <name-of-your-app-here> --public --source .
-```
-Check out the docs [here](https://cli.github.com/manual/gh_repo_create) if you want to learn more about this command. 
+1. EJS
+2. CSS
+3. JavaScript
+4. Node
+5. ExpressJs
+6. PassportJs / Google Oauth
+7. GitHub
+8. Google Fonts
+9. Heruku
+10. Font Awesome
+  
 
-Run npm i to fetch the template's dependencies:
 
-```bash
-npm i
-```
+## Next Steps
 
-touch a .env file:
-
-```bash
-touch .env
-```
-
-Fill it with the following:
-
-```
-DATABASE_URL=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-GOOGLE_CALLBACK=http://localhost:3000/auth/google/oauth2callback
-GOOGLE_CLIENT_ID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-GOOGLE_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-SESSION_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-```
-
-Replace the `DATABASE_URL`, `GOOGLE_CLIENT_ID`, `GOOGLE_SECRET`, and `SESSION_SECRET` with values that you provide.
-
-Delete this README.md and finally, make an initial commit:
-
-```bash
-git add .
-git commit -m "initial commit"
-git push -u origin main
-```
-
-You're done!
+1. 
