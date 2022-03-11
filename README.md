@@ -3,7 +3,7 @@
 ## About The Site 
 Duck Duck Shoe is a Ebay style website, where users can list items as well as view listings from others. Instead of purchasing items users can place reservations. I wanted also the users back-end to be similar to what is available in popular sites going into this.
 
-I decided to go with this style of site because I have built ecom-stores in the past using website templates, and I figured it would be neat to build something similar from scratch.
+I decided to go with this style of site because I have built ecom-stores in the past using website templates. I figured it would be neat to build something similar from scratch.
 
 ## Site Link
 ### [Duck Duck Shoe](https://duck-duck-shoe.herokuapp.com/)
@@ -36,4 +36,6 @@ I decided to go with this style of site because I have built ecom-stores in the 
 
 ## Next Steps
 
-1. 
+1.  Add collection pages & filter button on all shoes page
+2.  Add Nike / Adidas as an Oauth alternative
+3.  Add Content To The Home Screen
