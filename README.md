@@ -9,6 +9,9 @@ I decided to go with this style of site because I have built ecom-stores in the 
 ### [Duck Duck Shoe](https://duck-duck-shoe.herokuapp.com/)
 
 
+## Screenshot
+
+![Home Screen Image]('/../images/Homescreen%20Screenshot.png)
 
 ##  Wireframe
   [Here](https://whimsical.com/full-stack-ecommerce-store-G5c4X9Mw5wiF2JZVukVeBq)
