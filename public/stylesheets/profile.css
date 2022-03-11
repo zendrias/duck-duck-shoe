@@ -12,10 +12,8 @@ body{
   width:27vw;
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap; */
   justify-content: center;
   margin: 10px;
-  /* border: lightgray 1px solid; */
   align-items: center;
 }
 

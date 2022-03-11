@@ -150,9 +150,6 @@ a{
 }
 
 .dashboard-nav{
-/* border: #00B7FF solid 2px; */
-/* border-radius: 10px; */
-/* width: 100%; */
 display: flex;
 align-items: center;
 justify-content: space-evenly;
@@ -334,6 +331,7 @@ textarea{
   border: 1px solid red;
   padding: 7px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .flex-container-listings{
