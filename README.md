@@ -1,7 +1,7 @@
 # Duck Duck Shoe
 
 ## About The Site 
-Duck Duck Shoe is a Ebay style website, where users can list items as well as view listings from others. Instead of purchasing items users can place reservations. I wanted also the users back-end to be similar to what is available in popular sites going into this.
+Duck Duck Shoe is a Ebay style website, where users can list items as well as view listings from others. of course, this website is only for listing shoes. Instead of purchasing items users can place reservations. I wanted also the users back-end to be similar to what is available in popular sites going into this.
 
 I decided to go with this style of site because I have built ecom-stores in the past using website templates. I figured it would be neat to build something similar from scratch.
 
@@ -13,8 +13,8 @@ I decided to go with this style of site because I have built ecom-stores in the 
 
 ![Home Screen Image]('/../images/Homescreen%20Screenshot.png)
 
-##  Wireframe
-  [Here](https://whimsical.com/full-stack-ecommerce-store-G5c4X9Mw5wiF2JZVukVeBq)
+##  Trello Planning
+  [Here](https://trello.com/b/iHF0FSCM/sei-e-commerce)
 
 
 

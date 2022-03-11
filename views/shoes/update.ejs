@@ -3,25 +3,28 @@
 
 
     <body>
-      <h1>Update Listing</h1>
-      <form action="/shoes/update/<%= shoe._id %> " method="POST">
+      <h1 class="title">Update Listing</h1>
+      <form action="/shoes/update/<%= shoe._id %> " method="POST" class="new-form">
         <label for="name">Shoe Name</label>
-        <input type="text" name="name" required placeholder="Product Name" value="<%= shoe.name %> ">
+        <input type="text" name="name" required placeholder="Product Name" value="<%= shoe.name %> " class="new-input">
         <br>
         <label for="price">Set A Price</label>
-        <input type="Number" name="price" required placeholder="$" value="<%= shoe.price %>">
+        <input type="Number" name="price" required placeholder="$" value="<%= shoe.price %>" class="new-input">
         <br>
         <label for="size">Available Sizes</label>
-        <input name="size" type="text" required placeholder="Separate Each Size With A Comma" value="<%= shoe.size %> ">
+        <input name="size" type="text" required placeholder="Separate Each Size With A Comma" value="<%= shoe.size %> "
+          class="new-input">
         <br>
         <label for="image">Product Image Link</label>
-        <input type="text" name="image" required placeholder="URL Only" value="<%= shoe.image %> ">
+        <input type="text" name="image" required placeholder="URL Only" value="<%= shoe.image %> " class="new-input">
         <br>
         <h3>Brief Description</h3>
         <textarea id="description" name="description" rows="9" cols="80"
           placeholder="A Great Description Boosts Reservations By 47%!"><%= shoe.description %></textarea>
         <br>
-        <button type="submit">Update</button>
+        <div class="button mt10">
+          <button>Update!</button>
+        </div>
       </form>
     </body>
 
